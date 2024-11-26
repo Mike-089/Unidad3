@@ -1,13 +1,12 @@
 function recolectarDatos() {
     alert("Bienvenido. Vamos a recolectar tus datos.");
     let nombre = prompt("¿Cuál es tu nombre?");
-    let edad = prompt("¿Cuál es tu edad?");
-    let pais = prompt("¿Cuál es tu país de residencia?");
-    return { nombre, edad, pais }; 
+    let actividad = prompt("¿Cuál es tu actividad favorita?");
+    return { nombre, actividad}; 
 }
 
 function confirmarDatos(datos) {
-    let mensaje = `Estos son tus datos:\nNombre: ${datos.nombre}\nEdad: ${datos.edad}\nPaís: ${datos.pais}`;
+    let mensaje = `Estos son tus datos:\nNombre: ${datos.nombre}\nActividad favorita: ${datos.actividad}`;
     let confirmacion = confirm(mensaje + "\n¿Son correctos? ");
     return confirmacion; 
 }
@@ -22,8 +21,8 @@ function mostrarMensajeFinal(datosCorrectos) {
 }
 
 
-function saludarPorPais(datos) {
-    alert(`¡Hola, ${datos.nombre}! Espero que estés disfrutando tu estancia en ${datos.pais}.`);
+function saludar(datos) {
+    alert(`¡Hola, ${datos.nombre}! Espero que estés disfrutando de desperdiciar tu tiempo en ${datos.actividad}.`);
 }
 
 
@@ -32,5 +31,5 @@ let datos = recolectarDatos();
 let datosCorrectos = confirmarDatos(datos); 
 mostrarMensajeFinal(datosCorrectos); 
 if (datosCorrectos) {
-    saludarPorPais(datos); 
+    saludar(datos); 
 }
