@@ -15,6 +15,24 @@ div .boton {
     border-radius: 10%;
 }
 
+#botones-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  
+  }
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+
 
 .boton:hover {
     background-color: #8587ff;
@@ -71,7 +89,7 @@ h2 {
 
 .grid:hover {
     background-color: #969696;
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: transform 0.3s ease;
     border: 5px solid rgb(100, 100, 100);
 }
@@ -80,6 +98,24 @@ h2 {
     width: 3em;
     height: auto;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007BFF;
+    color: white;
+  }
 
 
 /* Aquí no debe haber reglas de grid-column fuera de los media queries */
@@ -91,6 +127,9 @@ grid-template-columns: repeat(2, 1fr);
 }
 .grid:nth-child(1) {
 grid-column: 1/3; /* Afecta el primer grid, ocupa toda la fila */
+}
+.grid:hover {
+    transform: scale(1.05);
 }
 
 }
@@ -106,8 +145,9 @@ grid-column: auto; /* Ajusta las columnas según el tamaño */
 .grid:nth-child(4) {
 grid-column: auto;
 }
-h1 {
-color: #37ff0079;
+
+.grid:hover {
+    transform: scale(1.05);
 }
 }
 
