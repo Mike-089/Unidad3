@@ -1,9 +1,9 @@
-// Obtener referencias a los elementos del DOM
+
 const menu = document.getElementById('menu');
 const removeFirstButton = document.getElementById('removeFirst');
 const addLinkButton = document.getElementById('addLink');
 
-// Función para eliminar el primer elemento del menú
+
 removeFirstButton.addEventListener('click', () => {
     if (menu.firstElementChild) {
         menu.removeChild(menu.firstElementChild);
@@ -12,7 +12,7 @@ removeFirstButton.addEventListener('click', () => {
     }
 });
 
-// Función para agregar un nuevo enlace al menú
+
 addLinkButton.addEventListener('click', () => {
     const newLink = prompt('Ingresa la URL de la nueva película:');
     const newTitle = prompt('Ingresa el título de la nueva película:');
